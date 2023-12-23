@@ -1,17 +1,21 @@
 import React, { useState, useEffect } from 'react'
 
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import './EachProduct.css'
 import ReactStars from "react-rating-stars-component";
+import Header from '../Header/Header.jsx';
+import CartList from '../CartList/CartList.jsx';
+import {addtoCart} from '../Display/Display.jsx'
 
 
 const eachProduct = () => {
   const { id } = useParams();
   const [eachProduct, seteachProduct] = useState([])
   const [count, setcount] = useState(0)
-  
+  // const [cart, setCart] = useState([])
+  const [showCart, setshowCart] = useState(false)
 
-
+ 
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -19,9 +23,16 @@ const eachProduct = () => {
       const data = await response.json()
       console.log(data)
       seteachProduct(data)
+      
+      
     }
     fetchProduct()
   }, [])
+
+  // const addtoCart = (a) => {
+  //   console.log(a)
+  //   setCart([...cart, { ...a, quantity: 1 }])
+  // }
 
   const add = () => {
     setcount(count + 1)
@@ -34,8 +45,11 @@ const eachProduct = () => {
   console.log(eachProduct.title)
 
   return (
+
     <>
-      <div className="Eachmain">
+      <Header count={cart.length} setshowCart={setshowCart} />
+
+      {showCart ? <CartList cart={cart} /> : <div className="Eachmain">
         <div className="left">
           <img className='image' src={eachProduct?.image} alt='' srcset="" />
           <h1>{eachProduct?.title}</h1>
@@ -46,7 +60,7 @@ const eachProduct = () => {
           </div>
           <div className="ratings">
             <ReactStars
-            
+
               count={5}
               // onChange={ratingChanged}
               size={34}
@@ -67,12 +81,13 @@ const eachProduct = () => {
             <button onClick={minus} >-</button>
           </div>
           <div className="btn2">
-            <button>Add to Cart</button>
+            <Link><button onClick={() => addtoCart(data)}>Add to Cart</button></Link>
             <button>Buy Now</button>
           </div>
 
         </div>
-      </div>
+      </div>}
+
     </>
   )
 }

@@ -24,7 +24,7 @@ const Display = () => {
   }, [])
 
   console.log(cart)
-  const addtoCart = (a) => {
+   const addtoCart = (a) => {
     console.log(a)
     setCart([...cart, {...a,quantity:1}])
   }

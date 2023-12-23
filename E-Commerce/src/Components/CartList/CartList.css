@@ -11,7 +11,7 @@
 .Carimg{
     width: 200px;
     
-    background-color: aqua;
+    /* background-color: aqua; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,6 +22,69 @@
 }
 .cartTitle{
     width: 400px;
-    background: #ad5858;
+    
 }
+.total{
+    width: auto;
+    height:6vh;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 70px;
+    font-size: 25px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    /* background-color: bisque; */
+}
+.wrap
+{
+    display: flex;
+    gap: 90px;
+}
+.Cart{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.empty{
+    text-align: center;
+    font-size: 3vw;
+    /* background-color: bisque; */
+}
+.imggg{
+   
+    width: auto;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width:500px){
+    .total{
+        width: 100%;
+    }
+    .wrap{
+        flex-direction: column;
+        gap: 50px;
+    }
+    .Cart{
+        
+        padding-left: 60px;
+        font-size: 20px;
+    }
+    .cartTitle{
+        width: 90px;
+        font-size: 16px;
+        
+    }
+    .Carimg{
+        width: 100px;}
+    
+}
+    
+
 
