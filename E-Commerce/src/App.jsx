@@ -3,7 +3,7 @@ import Header from './Components/Header/Header';
 import Display from './Components/Display/Display.jsx';
 import React from 'react'
 import{Routes,Route} from 'react-router-dom'
-import EachProduct from './Components/EachProduct/eachProduct.jsx';
+import EachProduct from './Components/EachProduct/EachProduct.jsx';
 import CartList from './Components/CartList/CartList.jsx';
 
 
