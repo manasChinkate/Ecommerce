@@ -1,0 +1,17 @@
+.menu-main{
+    background-color: azure;
+    position: absolute;
+    height: 100vh;
+    width: 200px;
+    margin-top: 28px;
+}
+.meni{
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    list-style: none;
+    gap: 5px;
+}
+.meni li{
+    border-bottom: 1px solid grey;
+}
