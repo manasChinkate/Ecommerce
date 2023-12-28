@@ -17,13 +17,13 @@ const Header = (props) => {
                     <AiOutlineMenu  style={{ color: "white", fontSize: "30px",  }} /></div>
 
                     <Link to={'/'} style={{ listStyle: "none", textDecorationLine: "none" }}>
-                        <div className="logo" onClick={() => props.setShowCart(false)} >
+                        <div className="logo" onClick={() => props.setshowCart(false)} >
                             <h1>Shop<span>City</span> </h1>
                         </div>
                     </Link>
 
-                    <div className="cart" onClick={() => props.setShowCart(true)}>
-                        <Link  >
+                    <div className="cart" onClick={() => props.setshowCart(true)}>
+                        <Link   >
                             <div><IoCartSharp style={{ color: "white", fontSize: "40px" }} />
                                 <sup style={{ color: "white" }}>{props.count}</sup>
                             </div>

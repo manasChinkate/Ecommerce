@@ -13,7 +13,7 @@ const eachProduct = () => {
   const { id } = useParams();
   const [eachProduct, seteachProduct] = useState([])
   const [count, setcount] = useState(0)
-  const [cart, setCart] = useState([])
+
   const [showCart, setshowCart] = useState(false)
 
 
@@ -43,18 +43,15 @@ const eachProduct = () => {
     count ? count < 0 : setcount(0)
   }
 
-  const addtoCart = (a) => {
-    console.log(a)
-    setCart([...cart, {...a,quantity:1}])
-  }
+
 
   // console.log(eachProduct.title)
  
   return (
 
     <>
-      { <Header count={cart.length} setshowCart={setshowCart}  /> }
-      {showCart ? <CartList cart={cart} /> : <div className="Eachmain">
+      { <Header  setshowCart={setshowCart}  /> }
+       <div className="Eachmain">
         <div className="left">
           <img className='image' src={eachProduct?.image} alt='' srcset="" />
           <h1>{eachProduct?.title}</h1>
@@ -86,12 +83,12 @@ const eachProduct = () => {
             <button onClick={minus} >-</button>
           </div>
           <div className="btn2">
-            <Link><button onClick={() => addtoCart(eachProduct.data)} >Add to Cart</button></Link>
+          
             <button>Buy Now</button>
           </div>
 
         </div>
-      </div>}
+      </div>
 
      
     </>

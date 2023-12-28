@@ -62,6 +62,27 @@
     align-items: center;
     justify-content: center;
 }
+.buy{
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    /* background-color: brown; */
+    margin-bottom: 30px;
+}
+.buy button{
+    height: 40px;
+    width: 130px;
+    background-color: #fcdede;
+    border: none;
+    font-size: 20px;
+}
+
+.buy button:hover{
+    background-color:#f8bbbb ;
+}
+
 
 @media screen and (max-width:500px){
     .total{

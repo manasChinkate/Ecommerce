@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
 import './CartList.css'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
+
 
 
 
@@ -10,10 +12,11 @@ const CartList = ({ cart }) => {
 
     useEffect(() => {
         setCaart(cart)
+        console.log(Caart)
     }, [cart])
 
+   
     
-
     return (
 
         
@@ -22,7 +25,7 @@ const CartList = ({ cart }) => {
                 
                 
                 {
-                    Caart.length == 0 ?<><div className='imggg'> <img src="https://gibbonnutrition.com/img/empty-cart-yellow.png" alt="" /></div> </> : <>{Caart?.map((data, itemIndex) => {
+                    Caart?.length == 0 ?<><div className='imggg'> <img src="https://gibbonnutrition.com/img/empty-cart-yellow.png" alt="" /></div> </> : <>{Caart?.map((data, itemIndex) => {
                         return (
                             <div className='cartItem'>
                                 <div className="Item">
@@ -50,7 +53,7 @@ const CartList = ({ cart }) => {
                                                 setCaart(_Cart)
                                             }} >-</button>
                                         </div>
-                                        <div className="Cart">Rs. {data.price * data.quantity}</div>
+                                        <div className="Cart">Rs. {Math.floor(data.price * data.quantity)} </div>
 
 
                                         
@@ -66,8 +69,11 @@ const CartList = ({ cart }) => {
                 
                 <div className='total'> Total Price : Rs. {
 
-                    Caart.map(item => item.price * item.quantity).reduce((total, value) => total + value, 0)
+                    Caart.map (item =>  item.price * item.quantity).reduce((total, value) => total + value , 0 )
                 }</div>
+                <div className="buy">
+                    <Link to={'/Checkout'}><button>Buy Now</button></Link>
+                </div>
 
             </div>
         </>

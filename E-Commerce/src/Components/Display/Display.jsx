@@ -8,11 +8,12 @@ import { Link } from 'react-router-dom';
 import CartList from '../CartList/CartList.jsx';
 import Header from '../Header/Header.jsx';
 import Menu from '../Menu/Menu.jsx';
+import{Routes,Route} from 'react-router-dom'
 
 
 const Display = () => {
   const [product, setProduct] = useState([])
-  const [cart, setCart] = useState([])
+  const [cart, setCart] = useState([])//Main cart
  
 
   const [search, setSearch] = useState('')
@@ -68,7 +69,7 @@ const Display = () => {
 
   return (
     <>
-      <Header count={cart.length} setShowCart = {setshowCart}  />
+      <Header count={cart.length} setshowCart={setshowCart}  />
 
       <div className="bottom">
         <div className='btndiv' value={region}
@@ -88,8 +89,12 @@ const Display = () => {
       {
        
         
-        showCart ?  <CartList cart={cart} /> : 
-        <><div className='popular' ><h1>MOST POPULAR PRODUCTS</h1></div>
+         showCart ?  <CartList cart={cart}  /> : 
+        <>
+        
+       
+        
+        <div className='popular' ><h1>MOST POPULAR PRODUCTS</h1></div>
           <div className="searchbar">
             <input type="search" placeholder='Search item' onChange={(e) => setSearch(e.target.value)} />
             <button>Search</button>
