@@ -1,19 +1,25 @@
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import './CartList.css'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
+import CartContext from '../../Context/CartContext'
 
 
 
-const CartList = ({ cart }) => {
 
-    const [Caart, setCaart] = useState([])
+const CartList = () => {
 
-    useEffect(() => {
-        setCaart(cart)
-        console.log(Caart)
-    }, [cart])
+    // const [Caart, setCaart] = useState([])
+    const{setmainCart,mainCart} = useContext(CartContext)
+
+
+    // useEffect(() => {
+    //     // setCaart(cart)
+    //     console.log(Caart)
+    //     setmainCart(Caart)
+    //     // console.log(mainCart)
+    // }, [mainCart])
 
    
     
@@ -25,7 +31,7 @@ const CartList = ({ cart }) => {
                 
                 
                 {
-                    Caart?.length == 0 ?<><div className='imggg'> <img src="https://gibbonnutrition.com/img/empty-cart-yellow.png" alt="" /></div> </> : <>{Caart?.map((data, itemIndex) => {
+                    mainCart?.length == 0 ?<><div className='imggg'> <img src="https://gibbonnutrition.com/img/empty-cart-yellow.png" alt="" /></div> </> : <>{mainCart?.map((data, itemIndex) => {
                         return (
                             <div className='cartItem'>
                                 <div className="Item">
@@ -36,21 +42,21 @@ const CartList = ({ cart }) => {
                                         <div className="btns">
                                             <button
                                                 onClick={() => {
-                                                    const _Cart = Caart.map((item, index) => {
+                                                    const _Cart = mainCart.map((item, index) => {
                                                         return itemIndex === index ? { ...item, quantity: item.quantity + 1  } : item
     
                                                     })
-                                                    setCaart(_Cart)
+                                                    setmainCart(_Cart)
                                                 }} >
     
                                                 +</button>
                                             <input type="text" value={data.quantity} />
                                             <button onClick={() => {
-                                                const _Cart = Caart.map((item, index) => {
+                                                const _Cart = mainCart.map((item, index) => {
                                                     return itemIndex === index ? { ...item, quantity: item.quantity > 0 ? item.quantity - 1 : 0 } : item
     
                                                 })
-                                                setCaart(_Cart)
+                                                setmainCart(_Cart)
                                             }} >-</button>
                                         </div>
                                         <div className="Cart">Rs. {Math.floor(data.price * data.quantity)} </div>
@@ -69,7 +75,7 @@ const CartList = ({ cart }) => {
                 
                 <div className='total'> Total Price : Rs. {
 
-                    Caart.map (item =>  item.price * item.quantity).reduce((total, value) => total + value , 0 )
+                    mainCart.map (item =>  item.price * item.quantity).reduce((total, value) => total + value , 0 )
                 }</div>
                 <div className="buy">
                     <Link to={'/Checkout'}><button>Buy Now</button></Link>
