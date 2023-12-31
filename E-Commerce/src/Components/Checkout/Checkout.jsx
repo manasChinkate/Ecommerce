@@ -29,7 +29,7 @@ const Checkout = () => {
                     <div style={{ display: "flex", gap: "33px" }}>
                         {/* <input style={{width:"30px"}} type='number' /><option  ></option> */}
                         
-                        <div><Form.Select placeholder="Search By Name"
+                        <div><Form.Select 
                             //   value={region}
                             //   onChange={handleRegion}
 
@@ -48,7 +48,7 @@ const Checkout = () => {
                             }}
                         >
                             
-                            <option placeholder='+91'> </option>
+                            <option > </option>
                             {codes.map((data=>{
                                 return(
                                     <option value={"Africa"} >{data.dial_code} {data.name}</option>
@@ -68,6 +68,7 @@ const Checkout = () => {
                         <input style={{ width: "500px", marginLeft: "-20px" }} type="number" placeholder='Enter your Number' /></div>
                     <input type="email" placeholder='Enter your Email' />
                     <input type="text" placeholder='Address' />
+                    <input type="number" placeholder='Pincode' />
 
                 </div>
 

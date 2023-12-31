@@ -33,6 +33,19 @@ button{
     border: 1px solid black;
     cursor: pointer;
 }
+.lobtn{
+    height: 40px;
+    width: 90px;
+    position: absolute;
+    right: 90px;
+    font-weight: 600;
+    background-color: rgb(140, 77, 212);
+    color: aliceblue;
+}
+.lobtn:hover{
+    background-color: rgb(140, 77, 212) ;
+}
+
 
 
 button:hover{

@@ -2,13 +2,14 @@
     height: 100vh;
     display: flex;
     margin-top: 28px;
+    background-color: rgb(0, 255, 200);
 }
 
 .checkleft {
     height: 100vh;
     width: 100%;
     /* background-color: antiquewhite; */
-    background-color: rgb(59, 59, 59);
+    /* background-color: rgb(59, 59, 59); */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,8 +19,8 @@
 .checkright {
     height: 100vh;
     width: 100%;
-    /* background-color: aqua; */
-    background-color: rgb(59, 59, 59);
+    
+    /* background-color: rgb(59, 59, 59); */
     display: flex;
     /* align-items: center; */
     justify-content: center;
@@ -28,9 +29,10 @@
 .form {
     height: 400px;
     width: 400px;
-    background-color: azure;
+    background-color: rgba(0, 255, 200, 0.342, 0.5);
     margin-bottom: 50px;
     border-radius: 10px;
+    /* border: 1px black solid; */
 }
 
 .form input {
@@ -42,7 +44,7 @@
     width: 500px;
     height: 400px;
     /* background-color: bisque; */
-    background-color: rgb(59, 59, 59);
+    background-color: rgba(0, 255, 200, 0.342, 0.5);
     /* display: flex; */
     /* align-items: center; */
     /* justify-content: center; */
