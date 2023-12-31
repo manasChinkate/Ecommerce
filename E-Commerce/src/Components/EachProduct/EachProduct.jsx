@@ -31,10 +31,10 @@ const eachProduct = () => {
     fetchProduct()
   }, [])
   
-  const handleClick =(a)=>{
-    setmainCart([...mainCart,{ ...a, quantity: 1 }])
+  const handleClick =()=>{
+    setmainCart([...mainCart, {...eachProduct,quantity:1  } ])
     console.log(mainCart)
-    console.log(eachProduct)
+    // console.log(eachProduct)
   }
 
   const add = () => {

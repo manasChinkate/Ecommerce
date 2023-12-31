@@ -14,15 +14,10 @@ const CartList = () => {
     const{setmainCart,mainCart} = useContext(CartContext)
 
 
-    // useEffect(() => {
-    //     // setCaart(cart)
-    //     console.log(Caart)
-    //     setmainCart(Caart)
-    //     // console.log(mainCart)
-    // }, [mainCart])
+  
 
    
-    
+    console.log(mainCart);
     return (
 
         
@@ -60,7 +55,6 @@ const CartList = () => {
                                             }} >-</button>
                                         </div>
                                         <div className="Cart">Rs. {Math.floor(data.price * data.quantity)} </div>
-
 
                                         
                                     

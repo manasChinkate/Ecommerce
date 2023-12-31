@@ -1,38 +1,62 @@
-.checkmain{
+.checkmain {
     height: 100vh;
     display: flex;
+    margin-top: 28px;
 }
-.checkleft{
+
+.checkleft {
     height: 100vh;
     width: 100%;
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
+    background-color: rgb(59, 59, 59);
     display: flex;
     align-items: center;
     justify-content: center;
+    border-right: 1px solid white;
 }
-.checkright{
+
+.checkright {
     height: 100vh;
     width: 100%;
-    background-color: aqua;
+    /* background-color: aqua; */
+    background-color: rgb(59, 59, 59);
     display: flex;
     /* align-items: center; */
     justify-content: center;
 }
-.form{
-height: 500px;
-width: 400px;
-background-color: azure;
+
+.form {
+    height: 400px;
+    width: 400px;
+    background-color: azure;
+    margin-bottom: 50px;
+    border-radius: 10px;
 }
-.form input{
+
+.form input {
     width: 350px;
     margin: 10px 20px;
 }
-.caratItem{
+
+.caratItem {
     width: 500px;
     height: 400px;
-    background-color: bisque;
+    /* background-color: bisque; */
+    background-color: rgb(59, 59, 59);
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    margin-top: 30px;
+    overflow-y: scroll;
+    border-radius: 20px;
+    scroll-behavior: smooth;
+    
+    
+    
+    
 }
-.Iatem{
+
+.Iatem {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,5 +64,33 @@ background-color: azure;
     background-color: aliceblue;
     padding: 10px 10px;
     width: 400px;
+    margin-left: 20px;
+    border-radius: 10px;
 
+}
+.cartTitle{
+    padding-left: 2%;
+}
+
+@media  screen and (max-width:500px)
+{
+   .checkmain{
+    flex-direction: column;
+   } 
+   .caratItem {
+    width: 455px;
+    height: 400px;
+    }
+    .cartTitle{
+        width: 138px;
+    }
+    .Cart{
+        padding-left: 35px;
+    }
+    .form{
+        
+        margin-top: 50px
+        
+        
+    }
 }
