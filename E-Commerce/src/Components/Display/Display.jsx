@@ -37,6 +37,9 @@ const Display = () => {
       setFilterList(product)
     })
   }, [])
+  useEffect(()=>{
+    
+  },[])
 
   // console.log(cart)
 
