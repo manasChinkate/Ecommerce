@@ -9,6 +9,7 @@ import CartList from '../CartList/CartList.jsx';
 import Header from '../Header/Header.jsx';
 
 import CartContext from '../../Context/CartContext.jsx';
+import Login from '../Practice/Login.jsx';
 
 
 const Display = () => {
@@ -77,9 +78,10 @@ const Display = () => {
     <>
       {/* <Header count={cart.length} setshowCart={setshowCart} /> */}
 
-      <div className="bottom">
+      <div className="bottom" >
         <div className='btndiv' value={region}
           onClick={handleList}
+          style={{height:"80px"}}
         >
 
           <button value={""} >All</button>
@@ -89,7 +91,9 @@ const Display = () => {
           <button value={"women's clothing"} >Women's Clothing</button>
 
         </div>
+        
       </div>
+      <div><Login/></div>
 
 
       {
