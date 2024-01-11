@@ -6,6 +6,14 @@ const url = "https://fakestoreapi.com"
 export default async function getProducts() {
 
     return await axios.get(`${url}/products`, {
+       
+
+    });
+}
+export async function geteProducts() {
+
+    return await axios.get(`https://api.escuelajs.co/api/v1/products`, {
+       
 
     });
 }
@@ -15,30 +23,7 @@ export async function getEachProduct(id) {
 
     });
 }
-export async function geteEachProduct() {
 
-    const axios = require('axios');
-
-    const options = {
-        method: 'GET',
-        url: 'https://amazon-pricing-and-product-info.p.rapidapi.com/',
-        params: {
-            asin: 'B07GR5MSKD',
-            domain: 'de'
-        },
-        headers: {
-            'X-RapidAPI-Key': '9d27679e52msh525e257395a6721p1bce7fjsnd7163236af6d',
-            'X-RapidAPI-Host': 'amazon-pricing-and-product-info.p.rapidapi.com'
-        }
-    };
-
-    try {
-        const response = await axios.request(options);
-        console.log(response.data);
-    } catch (error) {
-        console.error(error);
-    }
-}
 
 export function CountryCodes() {
     return [
@@ -1254,4 +1239,11 @@ export function CountryCodes() {
         }
     ]
 }
+
+
+
+
+
+
+
 

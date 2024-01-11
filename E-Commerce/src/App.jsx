@@ -5,7 +5,7 @@ import React, { useContext } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import EachProduct from './Components/EachProduct/EachProduct.jsx';
 import Checkout from './Components/Checkout/Checkout.jsx';
-import Login from './Components/Practice/login.jsx';
+
 import Profile from './Components/Practice/Profile.jsx';
 import { useEffect } from 'react';
 import CartContext from './Context/CartContext.jsx';

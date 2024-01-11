@@ -15,6 +15,7 @@
 }
 .logo{
     cursor: pointer;
+    margin-left: 600px;
 }
 
 span{
@@ -37,13 +38,14 @@ button{
     height: 40px;
     width: 90px;
     position: absolute;
-    right: 90px;
+    left: 30px;
     font-weight: 600;
-    background-color: rgb(140, 77, 212);
+    
+    background-color: rgb(75, 40, 114) ;
     color: aliceblue;
 }
 .lobtn:hover{
-    background-color: rgb(140, 77, 212) ;
+    background-color: rgb(140, 77, 212);
 }
 
 
@@ -56,6 +58,14 @@ button:hover{
         flex-direction: column;
         height: auto;
         /* background-color: rgb(171, 209, 241); */
+        
+    }
+    .logo{
+        cursor: pointer;
+        margin-left: 35px;
+    }
+    .lobtn{
+        left: 10px;
         
     }
     input{

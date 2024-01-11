@@ -1,6 +1,6 @@
 import React from 'react'
 // import { Carousel } from 'react-responsive-carousel';
-import Carousel from 'react-bootstrap/Carousel';
+
 import './Login.css'
 
 const Login = () => {
@@ -9,13 +9,19 @@ const Login = () => {
       <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
         <div classNameName="carousel-inner">
           <div className="carousel-item active">
-            <img  className="slide d-block " src="https://images-eu.ssl-images-amazon.com/images/G/31/CookwareDining/Aman/Jupiter/head/WhatsApp_Image_2024-01-06_at_23.40.38_1._CB585675433_.jpg" alt="First slide" />
+            <div  className="slide d-block " 
+            src="" 
+            alt="" />
           </div>
           <div className="carousel-item">
-            <img className=" slide d-block " src="https://images-eu.ssl-images-amazon.com/images/G/31/img22/Baby/cnnjpp1/Baby/D92807365-_1_Tallhero_2xx._CB598669664_.jpg" alt="Second slide" />
+            <div className=" slide1 d-block " 
+            src="" 
+            alt="" />
           </div>
           <div className="carousel-item">
-            <img className="slide d-block " src="https://images-eu.ssl-images-amazon.com/images/G/31/img2020/img21/apparelGW/jan24atf/unrec/hsbc/WA_WW_3000._CB585877492_.jpg" alt="Third slide" />
+            <div className="slide2 d-block " 
+            src=""
+             alt="" />
           </div>
         </div>
         <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">

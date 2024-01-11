@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import './Display.css'
-import getProducts from '../backend.js'
+import getProducts,{geteProducts}  from '../backend.js'
+// import geteProducts  from '../backend.js'
 import { useEffect } from 'react';
 import { FaStar } from "react-icons/fa";
 import { useState } from 'react'
@@ -8,12 +9,16 @@ import { Link } from 'react-router-dom';
 import CartList from '../CartList/CartList.jsx';
 import Header from '../Header/Header.jsx';
 
+
 import CartContext from '../../Context/CartContext.jsx';
 import Login from '../Practice/Login.jsx';
+// import { Axios } from 'axios';
+import axios from "axios";
 
 
 const Display = () => {
   const [product, setProduct] = useState([])
+  const [eproduct, seteProduct] = useState([])
   const [cart, setCart] = useState([])//Main cart
 
 
@@ -22,7 +27,8 @@ const Display = () => {
   const [filterList, setFilterList] = useState([]);
   // const [showCart, setshowCart] = useState(false)
 
-  const { setmainCart,mainCart,setshowCart,showCart } = useContext(CartContext)
+  const { setmainCart,mainCart,showCart } = useContext(CartContext)
+ 
 
   const handleList = (event) => {
     setRegion(event.target.value);
@@ -30,19 +36,35 @@ const Display = () => {
   }
 
 
+
+useEffect(()=>{
+  geteProducts().then(response=>{
+    const edata = response
+    // console.log(response.data)
+    // setProduct(data.data)
+    seteProduct(edata.data)
+    console.log("new data : ",eproduct)
+    
+   
+  })
+},[])
+
+
+
   useEffect(() => {
     getProducts().then(result => {
       const products = result
       setProduct(products.data)
 
-      setFilterList(product)
+      // setFilterList(product)
+      console.log(product)
     })
   }, [])
-  useEffect(()=>{
-    
-  },[])
+  
 
-  // console.log(cart)
+ 
+
+
 
 
   const addtoCart = (a) => {
@@ -93,7 +115,7 @@ const Display = () => {
         </div>
         
       </div>
-      <div><Login/></div>
+      
 
 
       {
@@ -103,7 +125,7 @@ const Display = () => {
           <>
 
 
-
+            <div><Login/></div>
             <div className='popular' ><h1>MOST POPULAR PRODUCTS</h1></div>
             <div className="searchbar">
               <input type="search" placeholder='Search item' onChange={(e) => setSearch(e.target.value)} />
@@ -148,7 +170,37 @@ const Display = () => {
                 }
 
               </>
-            </div></>
+            </div>
+            {/* <div className="dv">
+                {
+                  eproduct.map((data =>{
+                    return(
+                      <Link style={{ textDecoration: "none", color: "black" }} to={`/Products/${data?.id}`}>
+                        <div className='product-1'>
+                          <img className='imgg' style={{
+
+                          }} src={data?.image} alt="" />
+                          <span style={{
+                            color: "grey",
+                            fontSize: "12px",
+                            textTransform: "uppercase"
+                          }}>{data?.category}</span>
+                          <p>Name : {data?.title}</p>
+                          <p className='price'>${data.price} </p>
+                          <p>Rating : {data.rating?.rate} <FaStar /></p>
+                          <Link ><button onClick={() => addtoCart(data)} className='btn3' type="button">Add to Cart</button></Link>
+                        </div>
+
+                      </Link>
+                    )
+                  })
+                )}
+            </div> */}
+
+       
+            
+            </>
+            
 
       }
 

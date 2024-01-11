@@ -14,8 +14,12 @@ const Header = (props) => {
             <div className='main'>
 
                 <div className="top">
-                    <div className='menuu'>
-                        <AiOutlineMenu style={{ color: "white", fontSize: "30px", }} /></div>
+                    {/* <div className='menuu'>
+                        <AiOutlineMenu style={{ color: "white", fontSize: "30px", }} /></div> */}
+                           {isAuthenticated ? <button className='lobtn' onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
+                        Log Out
+                    </button> : <button className='lobtn' onClick={() => loginWithRedirect()}>Log In</button>
+                     }
 
                     <Link to={'/'} style={{ listStyle: "none", textDecorationLine: "none" }}>
                         <div className="logo" onClick={() => props.setshowCart(false)} >
@@ -23,10 +27,7 @@ const Header = (props) => {
                         </div>
                     </Link>
 
-                    {isAuthenticated ? <button className='lobtn' onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
-                        Log Out
-                    </button> : <button className='lobtn' onClick={() => loginWithRedirect()}>Log In</button>
-                     }
+                 
                     
 
                     <div className="cart" onClick={() => props.setshowCart(true)}>
