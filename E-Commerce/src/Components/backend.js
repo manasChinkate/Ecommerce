@@ -10,13 +10,7 @@ export default async function getProducts() {
 
     });
 }
-export async function geteProducts() {
 
-    return await axios.get(`https://api.escuelajs.co/api/v1/products`, {
-       
-
-    });
-}
 export async function getEachProduct(id) {
 
     return await axios.get(`https://fakestoreapi.com/products/${id}`, {

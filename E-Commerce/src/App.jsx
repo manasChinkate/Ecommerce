@@ -9,6 +9,7 @@ import Checkout from './Components/Checkout/Checkout.jsx';
 import Profile from './Components/Practice/Profile.jsx';
 import { useEffect } from 'react';
 import CartContext from './Context/CartContext.jsx';
+import Footer from './Components/Footer/Footer.jsx';
 
 
 
@@ -25,9 +26,10 @@ const App = () => {
           <Route path='/Products/:id' element={<><EachProduct /> </>} />
           <Route path='/Checkout' element={<Checkout />} />
         </Routes>
+
+      <Footer />
         
-    {/* <Login />
-    <Profile /> */}
+   
     </>
   )
 }

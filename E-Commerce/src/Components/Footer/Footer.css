@@ -1,0 +1,56 @@
+.fotmain{
+    min-height: 40vh;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    text-align: center;
+    padding-top: 30px;
+    background-color: #1a1a1a;
+    color: #fcdede;
+}
+
+h2{
+    font-size: 20px;
+}
+.l1 p{
+    cursor: pointer;   
+}
+.l2 p{
+    cursor: pointer;   
+}
+.l3 p{
+    cursor: pointer;   
+}
+p:hover{
+   
+    color: coral;
+}
+.backtotop{
+  width: 100%;
+  background-color: #1a1a1a;
+  color: #fcdede;
+  text-align: center;
+  padding: 20px 0;
+  cursor: pointer;
+}
+.backtotop:hover{
+    background-color: coral;
+    color: #000;
+    transition: all ease 1s;
+}
+
+@media  screen and (max-width:500px) {
+    h2{
+        font-size: 15px;
+    }
+    .l1 p{
+        font-size: 10px;
+    }
+    .l2 p{
+        font-size: 10px;
+    }
+    .l3 p{
+        font-size: 10px;
+    }
+  
+}

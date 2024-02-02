@@ -13,10 +13,6 @@ const CartList = () => {
     // const [Caart, setCaart] = useState([])
     const{setmainCart,mainCart} = useContext(CartContext)
 
-
-  
-
-   
     console.log(mainCart);
     return (
 

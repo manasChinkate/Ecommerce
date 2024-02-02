@@ -7,6 +7,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { useAuth0 } from "@auth0/auth0-react";
 
 
+
 const Header = (props) => {
     const { loginWithRedirect, logout,isAuthenticated } = useAuth0();
     return (
@@ -26,8 +27,6 @@ const Header = (props) => {
                             <h1>Shop<span>City</span> </h1>
                         </div>
                     </Link>
-
-                 
                     
 
                     <div className="cart" onClick={() => props.setshowCart(true)}>

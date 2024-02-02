@@ -6,8 +6,12 @@ import { useEffect } from 'react'
 import Form from 'react-bootstrap/Form';
 import { CountryCodes } from '../backend'
 
+
+
+
+
 const Checkout = () => {
-    const [checkoutCart, setcheckoutCart] = useState({})
+    // const [checkoutCart, setcheckoutCart] = useState({})
     const [codes, setCodes] = useState([])
     const { mainCart, setmainCart } = useContext(CartContext)
 
@@ -22,58 +26,9 @@ const Checkout = () => {
 
 
         <div className='checkmain'>
-            <div className="checkleft">
-                <div className="form">
-                    <h2 style={{ textAlign: "center", marginTop: "20px", marginBottom: "20px" }}>Enter your Details</h2>
-                    <input type="text" placeholder='Enter your Name' />
-                    <div style={{ display: "flex", gap: "33px" }}>
-                        {/* <input style={{width:"30px"}} type='number' /><option  ></option> */}
-
-                        <div><Form.Select
-                            //   value={region}
-                            //   onChange={handleRegion}
-
-
-                            style={{
-                                backgroundColor: 'white',
-
-                                height: "44px",
-                                color: 'black',
-                                width: "65px",
-                                borderRadius: '7px',
-                                marginTop: "10px",
-                                marginLeft: "20px",
-                                border: "1px solid"
-
-                            }}
-                        >
-
-                            <option > </option>
-                            {codes.map((data => {
-                                return (
-                                    <option value={"Africa"} >{data.dial_code} {data.name}</option>
-                                )
-                            }))}
-                            {/* <option value={"Africa"} >{data.dial_code}</option> */}
-
-
-                        </Form.Select></div>
-
-
-
-
-
-
-
-                        <input style={{ width: "500px", marginLeft: "-20px" }} type="number" placeholder='Enter your Number' /></div>
-                    <input type="email" placeholder='Enter your Email' />
-                    <input type="text" placeholder='Address' />
-                    <input type="number" placeholder='Pincode' />
-
-                </div>
-
-            </div>
+           
             <div className="checkright">
+                {/* <h1 style={{marginLeft:"50px",marginBottom:"20px"}} className='headerr' >Cart Items</h1> */}
                 {mainCart.length ? <div className='caratItem'>
                     <>
                         {mainCart.map((item => {
@@ -99,6 +54,31 @@ const Checkout = () => {
 
                     </>
                 </div> : <><div className='imggg'> <img src="https://gibbonnutrition.com/img/empty-cart-yellow.png" alt="" /></div></>}
+
+
+            </div>
+            <div className='checklast'>
+                <h1 style={{ marginTop: "5px" }} className='headerr' >Order Summary</h1>
+                <div className='bk'>
+
+                    <div style={{ height: "200px", marginBottom: "40px" }}>
+                        {mainCart.map((data) => {
+                            return (
+                                <>
+                                    <div className='r' style={{ display: "flex", gap: "30px" }} >
+                                        <p style={{ width: "250px", fontSize:"15px" }}>{data.title} </p>:
+                                        <p>{Math.floor(data.price)} Rs</p>
+                                    </div>
+                                </>
+                            )
+                        })}
+                    </div>
+
+                </div>
+                <p style={{marginTop:"25px",marginBottom:"10px", fontSize:"20px"}}>Total : {
+                    Math.floor(mainCart.map(item => item.price * item.quantity).reduce((total, value) => total + value, 0))
+                   
+                }  Rs </p>
                 <div className="acc">
                     <div className='a'>
                         <img style={{ marginTop: "10px" }} src="https://cdn-icons-png.flaticon.com/128/5351/5351625.png" alt="" height={50} />
@@ -117,16 +97,64 @@ const Checkout = () => {
                         <p>
                             1 Year Warranty
                         </p>
-                        </div>
+                    </div>
                     <div className='a'>
                         <img style={{ marginTop: "10px" }} src="https://cdn-icons-png.flaticon.com/128/5163/5163783.png" height={50} alt="" /> <p>
                             Pay On Delivery
-                        </p></div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div className="checkleft">
+                {/* <h1 style={{marginBottom:"30px"}} className='headerr' >Customer Details</h1> */}
+                <div className="form">
+                    <h2 style={{ textAlign: "center", marginTop: "20px", marginBottom: "20px" }}>Enter your Details</h2>
+                    <input type="text" placeholder='Enter your Name' />
+
+                    <div style={{ display: "flex", gap: "33px" }}>
+                        {/* <input style={{width:"30px"}} type='number' /><option  ></option> */}
+
+                        <div><Form.Select
+
+
+
+                            style={{
+                                backgroundColor: 'white',
+
+                                height: "44px",
+                                color: 'black',
+                                width: "65px",
+                                borderRadius: '7px',
+                                marginTop: "10px",
+                                marginLeft: "20px",
+                                border: "1px solid"
+
+                            }}
+                        >
+
+                            <option > </option>
+                            {codes.map((data => {
+                                return (
+                                    <option value={"Africa"} >{data.dial_code} {data.name}</option>
+                                )
+                            }))}
+
+
+
+                        </Form.Select></div>
+
+                        <input style={{ width: "272px", marginLeft: "-20px" }} type="number" placeholder='Enter your Number' /></div>
+                    <input type="email" placeholder='Enter your Email' />
+                    <input type="text" placeholder='Address' />
+                    <input type="number" placeholder='Pincode' />
+
+                    <button className='btns' type='submit'>Place Order</button>
+
                 </div>
 
             </div>
-
         </div>
+
 
     )
 }

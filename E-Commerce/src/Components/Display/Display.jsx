@@ -1,19 +1,20 @@
 import React, { useContext } from 'react'
 import './Display.css'
-import getProducts,{geteProducts}  from '../backend.js'
-// import geteProducts  from '../backend.js'
+import getProducts  from '../backend.js'
+
 import { useEffect } from 'react';
 import { FaStar } from "react-icons/fa";
 import { useState } from 'react'
 import { Link } from 'react-router-dom';
 import CartList from '../CartList/CartList.jsx';
-import Header from '../Header/Header.jsx';
+
+
 
 
 import CartContext from '../../Context/CartContext.jsx';
 import Login from '../Practice/Login.jsx';
-// import { Axios } from 'axios';
-import axios from "axios";
+
+
 
 
 const Display = () => {
@@ -28,41 +29,21 @@ const Display = () => {
   // const [showCart, setshowCart] = useState(false)
 
   const { setmainCart,mainCart,showCart } = useContext(CartContext)
- 
 
   const handleList = (event) => {
     setRegion(event.target.value);
     console.log(region)
   }
 
-
-
 useEffect(()=>{
-  geteProducts().then(response=>{
-    const edata = response
-    // console.log(response.data)
-    // setProduct(data.data)
-    seteProduct(edata.data)
-    console.log("new data : ",eproduct)
-    
-   
+  getProducts().then(result=>{
+    const products = result
+    setProduct(products.data)
+    setFilterList(product)
+    console.log(product)
   })
 },[])
 
-
-
-  useEffect(() => {
-    getProducts().then(result => {
-      const products = result
-      setProduct(products.data)
-
-      // setFilterList(product)
-      console.log(product)
-    })
-  }, [])
-  
-
- 
 
 
 
@@ -80,7 +61,7 @@ useEffect(()=>{
     }
     else {
       let updatedproduct = product;
-      console.log(updatedproduct.title)
+      // console.log(updatedproduct.title)
 
       if (region.length) {
         updatedproduct = updatedproduct.filter(productName => {
@@ -91,6 +72,7 @@ useEffect(()=>{
         });
       }
       setFilterList(updatedproduct);
+      console.log(filterList)
 
     }
   }, [region, product])
@@ -99,6 +81,7 @@ useEffect(()=>{
   return (
     <>
       {/* <Header count={cart.length} setshowCart={setshowCart} /> */}
+    
 
       <div className="bottom" >
         <div className='btndiv' value={region}
@@ -171,31 +154,7 @@ useEffect(()=>{
 
               </>
             </div>
-            {/* <div className="dv">
-                {
-                  eproduct.map((data =>{
-                    return(
-                      <Link style={{ textDecoration: "none", color: "black" }} to={`/Products/${data?.id}`}>
-                        <div className='product-1'>
-                          <img className='imgg' style={{
-
-                          }} src={data?.image} alt="" />
-                          <span style={{
-                            color: "grey",
-                            fontSize: "12px",
-                            textTransform: "uppercase"
-                          }}>{data?.category}</span>
-                          <p>Name : {data?.title}</p>
-                          <p className='price'>${data.price} </p>
-                          <p>Rating : {data.rating?.rate} <FaStar /></p>
-                          <Link ><button onClick={() => addtoCart(data)} className='btn3' type="button">Add to Cart</button></Link>
-                        </div>
-
-                      </Link>
-                    )
-                  })
-                )}
-            </div> */}
+          
 
        
             
