@@ -5,6 +5,7 @@ import CartContext from '../../Context/CartContext'
 import { useEffect } from 'react'
 import Form from 'react-bootstrap/Form';
 import { CountryCodes } from '../backend'
+import { PiShoppingCartFill } from "react-icons/pi";
 
 
 
@@ -148,10 +149,10 @@ const Checkout = () => {
                     <input type="text" placeholder='Address' />
                     <input type="number" placeholder='Pincode' />
 
-                    <button className='btns' type='submit'>Place Order</button>
+                    
 
                 </div>
-
+                <button className='btnss' type='submit'>Place Order </button>
             </div>
         </div>
 

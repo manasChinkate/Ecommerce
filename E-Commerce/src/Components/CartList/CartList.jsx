@@ -65,7 +65,7 @@ const CartList = () => {
                 
                 <div className='total'> Total Price : Rs. {
 
-                    mainCart.map (item =>  item.price * item.quantity).reduce((total, value) => total + value , 0 )
+                  Math.floor(mainCart.map (item =>  item.price * item.quantity).reduce((total, value) => total + value , 0 ))  
                 }</div>
                 <div className="buy">
                     <Link to={'/Checkout'}><button>Buy Now</button></Link>
