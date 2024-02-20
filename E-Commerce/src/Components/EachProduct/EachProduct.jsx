@@ -55,7 +55,7 @@ const eachProduct = () => {
      {showCart ?<CartList cart={mainCart} /> :<div className="Eachmain">
         <div className="left">
           <img className='image' src={eachProduct?.image} alt='' srcset="" />
-          <h1>{eachProduct?.title}</h1>
+          <h1 className='h'>{eachProduct?.title}</h1>
         </div>
         <div className="right">
           <div className="h1">

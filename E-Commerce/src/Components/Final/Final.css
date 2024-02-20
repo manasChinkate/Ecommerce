@@ -1,0 +1,71 @@
+/* OrderSuccessfulPage.css */
+
+.order-success-container {
+    width: 100vh;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
+  
+  .title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .final-h2{
+    text-align: center;
+  }
+  .order-details-list {
+    list-style-type: none;
+    padding: 40px;
+  }
+  .order-details-list li{
+    padding: 5px;
+  }
+  
+  .items-list {
+    list-style-type: none;
+    padding-left: 20px;
+    
+    
+  }
+  .linked{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .last-p{
+    text-align: center;
+  }
+  
+  .items-list li {
+    margin-bottom: 10px;
+   
+  }
+
+  .one{
+    border-bottom: 1px black solid;
+  }
+  
+  strong {
+    font-weight: bold;
+  }
+
+  @media  screen and (max-width:500px) {
+
+      .order-details-list {
+    list-style-type: none;
+    padding: 20px;
+    
+  }
+  .order-success-container{
+    width: 80vh;
+    margin-left: 35px;
+  }
+  }
+  

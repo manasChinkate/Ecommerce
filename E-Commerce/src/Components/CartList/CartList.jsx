@@ -29,7 +29,7 @@ const CartList = () => {
                                     
                                     <div className="Carimg"><img src={data.image} width={80} height={90} alt="" /></div>
                                     <div className="cartTitle" >{data.title}  </div>
-                                    <div className='wrap'>
+                                    <div className='wrappp'>
                                         <div className="btns">
                                             <button
                                                 onClick={() => {

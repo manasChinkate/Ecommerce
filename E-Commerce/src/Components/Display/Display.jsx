@@ -108,7 +108,7 @@ useEffect(()=>{
           <>
 
 
-            <div><Login/></div>
+            
             <div className='popular' ><h1>MOST POPULAR PRODUCTS</h1></div>
             <div className="searchbar">
               <input type="search" placeholder='Search item' onChange={(e) => setSearch(e.target.value)} />
@@ -133,11 +133,7 @@ useEffect(()=>{
                           <img className='imgg' style={{
 
                           }} src={data?.image} alt="" />
-                          <span style={{
-                            color: "grey",
-                            fontSize: "12px",
-                            textTransform: "uppercase"
-                          }}>{data?.category}</span>
+                          <span className='span' >{data?.category}</span>
                           <p>Name : {data?.title}</p>
                           <p className='price'>${data.price} </p>
                           <p>Rating : {data.rating?.rate} <FaStar /></p>

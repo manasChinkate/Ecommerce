@@ -114,3 +114,31 @@
     
     
 }
+@media screen and (max-width:390px) {    
+    .left{
+        height: 400px ;
+    }
+    .Eachmain{
+        margin-top: 0px;
+    }
+    .image{
+        height: 300px;
+        /* margin-right: 30px; */
+    }
+    .h{
+        display: none;
+    }
+    .h1{
+        padding: 0 20px;
+        
+    }
+    .ratings{
+        padding-left: 10px;
+    }
+    .pricing{
+        padding-left: 10px;
+    }
+    .desc{
+        width: 350px;
+    }
+}

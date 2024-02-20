@@ -1,36 +1,12 @@
-
-.carousel-item{
-    height: 450px;
-    
-    overflow: hidden;
-    width: 100%;
-    
+.login-main{
+    min-height: 100vh;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-.carousel-item .slide{
-    width: 100vw;
-    height: 100%;
-    background: url("https://images-eu.ssl-images-amazon.com/images/G/31/CookwareDining/Aman/Jupiter/head/WhatsApp_Image_2024-01-06_at_23.40.38_1._CB585675433_.jpg");
-    border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0),#fbe5d9);
-    background-size: cover;
-}
-.slide1{
-    width: 100vw;
-    height: 100%;
-    background: url("https://images-eu.ssl-images-amazon.com/images/G/31/img22/Baby/cnnjpp1/Baby/D92807365-_1_Tallhero_2xx._CB598669664_.jpg");
-    border-image: fill 0 linear-gradient(#0001,#fbe5d9);
-    background-size: cover;
-}
-.slide2{
-    width: 100vw;
-    height: 100%;
-    background: url("https://images-eu.ssl-images-amazon.com/images/G/31/img2020/img21/apparelGW/jan24atf/unrec/hsbc/WA_WW_3000._CB585877492_.jpg");
-    border-image: fill 0 linear-gradient(#0001,#fbe5d9);
-    background-size: cover;
-}
-
-@media screen and (max-width:500px){
-    .carousel-item{
-        height: 200px;
-    }
+.wrap{
+    height: 400px;
+    background-color: aliceblue;
+    width: 400px;
 }

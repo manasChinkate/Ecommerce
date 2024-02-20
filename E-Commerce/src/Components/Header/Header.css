@@ -58,8 +58,6 @@ button:hover{
     .top{
         flex-direction: column;
         height: auto;
-        /* background-color: rgb(171, 209, 241); */
-        
     }
     .logo{
         cursor: pointer;
@@ -99,4 +97,58 @@ button:hover{
         background-color: beige;
         font-size: 2.4vw;
     }
+}
+@media screen and (max-width:390px){
+    .main {
+        width: 100%;
+        height: auto; /* Adjust height to accommodate content */
+    }
+
+    .top {
+        /* flex-direction: column; */
+        /* height: auto; */
+        padding: 10px;
+    }
+
+    .logo {
+        margin-left: 35px;
+    }
+
+    .lobtn {
+        left: 10px;
+    }
+
+    input {
+        width: 60vw;
+        background-color: aliceblue;
+    }
+
+    button {
+        width: 12vw;
+    }
+
+    .searchbar {
+        margin-top: 10px;
+    }
+
+    .cart {
+        margin-top: 10px;
+        position: absolute;
+        margin-right: 20px;
+    }
+
+    .menuu {
+        margin-top: 15px;
+        position: static; /* Remove absolute positioning */
+        margin-left: 20px;
+    }
+
+    ul {
+        gap: 20px;
+        background-color: beige;
+        font-size: 2.4vw;
+    }
+ 
+   
+ 
 }

@@ -10,12 +10,14 @@ import Profile from './Components/Practice/Profile.jsx';
 import { useEffect } from 'react';
 import CartContext from './Context/CartContext.jsx';
 import Footer from './Components/Footer/Footer.jsx';
+import Login from './Components/Practice/Login.jsx';
+import Final from './Components/Final/Final.jsx';
 
 
 
 const App = () => {
 
-  const { setmainCart,setshowCart,showCart } = useContext(CartContext)
+  const { setshowCart,showCart } = useContext(CartContext)
   const{mainCart} = useContext(CartContext)
 
   return (
@@ -25,6 +27,11 @@ const App = () => {
           <Route path='/' element={<Display />} />
           <Route path='/Products/:id' element={<><EachProduct /> </>} />
           <Route path='/Checkout' element={<Checkout />} />
+          <Route path='/login' element={<Login/>}/>
+          <Route path='/success' element={<Final/>}/>
+         
+          
+        
         </Routes>
 
       <Footer />

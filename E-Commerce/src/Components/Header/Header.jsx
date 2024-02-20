@@ -5,6 +5,7 @@ import { IoCartSharp } from "react-icons/io5";
 import { AiOutlineMenu } from "react-icons/ai";
 
 import { useAuth0 } from "@auth0/auth0-react";
+import Login from '../Practice/Login';
 
 
 
@@ -15,12 +16,14 @@ const Header = (props) => {
             <div className='main'>
 
                 <div className="top">
-                    {/* <div className='menuu'>
-                        <AiOutlineMenu style={{ color: "white", fontSize: "30px", }} /></div> */}
+                {/* <Link to={'/login'}>
+                        <button className='lobtn'>Log in</button>
+                     </Link> */}
                            {isAuthenticated ? <button className='lobtn' onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
                         Log Out
                     </button> : <button className='lobtn' onClick={() => loginWithRedirect()}>Log In</button>
                      }
+                  
 
                     <Link to={'/'} style={{ listStyle: "none", textDecorationLine: "none" }}>
                         <div className="logo" onClick={() => props.setshowCart(false)} >
