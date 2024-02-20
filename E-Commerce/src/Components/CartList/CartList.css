@@ -106,6 +106,23 @@
         width: 100px;}
     
 }
+@media screen and (max-width:390px){
+    .Item{
+        flex-direction: column;
+    }
+    .cartTitle{
+        width: 300px;
+        font-size: 16px;
+        text-align: center;
+        
+    }
+    .Item{
+        gap: 20px;
+    }
+    .wrappp{
+        gap: 10px;
+    }
+}
     
 
 

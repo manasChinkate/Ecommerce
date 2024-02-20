@@ -54,3 +54,12 @@ p:hover{
     }
   
 }
+@media  screen and (max-width:390px){
+    .fotmain{
+        padding: 0px 20px;
+    }
+    h2{
+        line-height: 25px;
+        margin-bottom: 20px;
+    }
+}
