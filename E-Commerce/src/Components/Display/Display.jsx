@@ -86,7 +86,7 @@ useEffect(()=>{
       <div className="bottom" >
         <div className='btndiv' value={region}
           onClick={handleList}
-          style={{height:"80px"}}
+          
         >
 
           <button value={""} >All</button>

@@ -103,9 +103,9 @@ let navigate = useNavigate();
                                     <div className="Iatem" key="">
 
                                         <div className="Carimg"><img src={item.image} width={80} height={90} alt="" /></div>
-                                        <div className="cartTitle"  >{item.title}  </div>
+                                        <div className="cartTitle"  >{item.title}   </div>
                                         <div className='wrapp'>
-
+                                        
                                             <div className="Cartp">Rs.{item.price}
                                                 
                                             </div>

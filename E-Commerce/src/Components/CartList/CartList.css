@@ -111,7 +111,7 @@
         flex-direction: column;
     }
     .cartTitle{
-        width: 300px;
+       
         font-size: 16px;
         text-align: center;
         
@@ -121,6 +121,10 @@
     }
     .wrappp{
         gap: 10px;
+    }
+    .total{
+        width: 100%;
+        margin-left: 30px;
     }
 }
     

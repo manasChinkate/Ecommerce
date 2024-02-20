@@ -68,4 +68,26 @@
     margin-left: 35px;
   }
   }
+  @media  screen and (max-width:390px){
+    .order-success-container{
+      width: 40vh;
+      margin: auto;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      font-size: 14px;
+    }
+    strong{
+      font-size: 14px;
+    }
+    .order-success-container li{
+      font-size: 14px;
+    }
+    .one{
+      font-size: 12px;
+    }
+    .btnss{
+      margin-right: 19px;
+    }
+    
+  }
   

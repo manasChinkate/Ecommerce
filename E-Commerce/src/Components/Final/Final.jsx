@@ -53,7 +53,7 @@ const Final = () => {
 
         <li><strong>Order Date : </strong> {today}</li>
 
-        <li><strong>Items: {mainCart.length}</strong></li>
+        <li><strong>Items : {mainCart.length}</strong></li>
         <ul className="items-list">
           <>
             {

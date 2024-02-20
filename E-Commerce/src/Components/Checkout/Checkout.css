@@ -10,8 +10,7 @@
 .checkleft {
     height: 100vh;
     width: 100%;
-    /* background-color: antiquewhite; */
-    /* background-color: rgb(59, 59, 59); */
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -69,10 +68,7 @@
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
-.form input {
-    width: 350px;
-    margin: 10px 20px;
-}
+
 
 .caratItem {
     width: 500px;
@@ -158,9 +154,6 @@ box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 
 {
    .checkmain{
     flex-direction: column;
-    
- 
-   
    } 
    .checkright{
     margin-top: 10px;
@@ -191,5 +184,45 @@ box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 
     }
     .btnss{
         margin-bottom: 20px;
+    }
+}
+@media  screen and (max-width:390px){
+    .checkright{
+        height: 50vh;
+        padding-bottom: 20px;
+    }
+    .caratItem{
+        width: 370px;
+        /* background-color: aqua; */
+        padding: 0;
+    }
+    .Iatem{
+        width: 350px;
+        margin-left: 19px;
+    }
+    .cartTitle{
+        font-size: 14px;
+        margin-right: 15px;
+    }
+    .Carimg{
+        margin-right: 20px;
+    }
+    .checklast{
+        height: 80vh;
+    }
+    .checkleft{
+        height: 70vh;
+        justify-content: start;
+    }
+    .btnss{
+        margin-left: 24px;
+        margin-top: 60px;
+    }
+    .form{
+        width: 350px;
+    }
+    .form input {
+        width: 310px;
+        margin: 10px 20px;
     }
 }

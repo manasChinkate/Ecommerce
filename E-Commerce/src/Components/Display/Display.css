@@ -6,8 +6,8 @@
 }
 
 .btndiv {
-    /* background-color: #fcdede; */
-    height: 40px;
+    
+    height: 80px;
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -205,8 +205,20 @@ input {
         /* flex-wrap: wrap; */
         padding-left: 0px;
         padding-right: 0px;
-        overflow-y: scroll;
+        gap: 10px;
+        flex-wrap: wrap;  
+        height: 120px;
+        padding-top: 30px;
+            
     }
+    
+    .btndiv button{
+        font-size: 12px;
+        height: 30px;
+        border-radius: 20px;
+        background-color: #313131;
+    }
+  
     .product-1{
         width: 300px;
         display: flex;
